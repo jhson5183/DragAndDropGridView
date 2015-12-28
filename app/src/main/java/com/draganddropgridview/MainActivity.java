@@ -1,38 +1,89 @@
 package com.draganddropgridview;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.lib.draganddropgridview.DropAdapter;
+import com.lib.draganddropgridview.DropGridView;
+import com.lib.draganddropgridview.DropHolder;
+import com.lib.draganddropgridview.DropModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    private DropGridView mDropGridView;
+    private DropAdapter mDropAdapter;
+    private List<DropModel> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mDropGridView = (DropGridView) findViewById(R.id.grid_view);
+
+        getData();
+        mDropAdapter = new NumberAdapter(this, mList);
+        mDropGridView.setAdapter(mDropAdapter);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    private void getData(){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        for (int i = 0; i < 300; i++){
+            mList.add(new NumberModel(String.valueOf(i)));
         }
 
-        return super.onOptionsItemSelected(item);
     }
+
+    class NumberModel extends DropModel{
+
+        private String mNumber;
+        NumberModel(String number){
+            mNumber = number;
+        }
+
+    }
+
+    class NumberAdapter extends DropAdapter{
+
+        NumberAdapter(Context context, List<DropModel> list){
+            super(context, list);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            DropHolder holder = null;
+            if(convertView == null){
+                LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = inflater.inflate(R.layout.adapter_number, null);
+                holder = new DropHolder();
+                convertView.setTag(holder);
+            }else{
+                holder = (DropHolder)convertView.getTag();
+            }
+
+            NumberModel model = (NumberModel)getItem(position);
+
+            TextView textView = (TextView)convertView.findViewById(R.id.text1);
+            textView.setText(model.mNumber);
+            holder.item = model;
+
+            return convertView;
+        }
+    }
+
+
 }
