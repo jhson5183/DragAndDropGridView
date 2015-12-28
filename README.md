@@ -16,7 +16,7 @@ DropAdapter : 그리드뷰에 들어가는 어댑터로 해당 클래스를 상�
   
   //////////
 
-class NumberModel extends DropModel{
+    class NumberModel extends DropModel{
 
         private String mNumber;
         NumberModel(String number){
