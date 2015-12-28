@@ -369,8 +369,8 @@ public class DropGridView extends GridView implements OnItemLongClickListener, O
         		int fromX = 0;
             	int fromY = 0;
 
-        		if(i%3 == 0){
-        			toX = -toX * 2;
+        		if(i % getNumColumns() == 0){
+        			toX = -toX * (getNumColumns() -1);
         			toY = getChildAt((i - getFirstVisiblePosition())).getHeight();
         		}
 
