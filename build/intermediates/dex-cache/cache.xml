@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-e63c71f3dbc5785f92e7774dd5d727a6bd456ffe.jar" />
+    </item>
+    <item
+        jar="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/exploded-aar/DragAndDropGridView/draganddropgridview/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7cc3f75d36c04fe0a3a5c21eb76b1b86d2c96c31">
+        <dex dex="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/pre-dexed/debug/classes-74a21292708d8cce5d5b0344650ce55b5edc6487.jar" />
+    </item>
+    <item
+        jar="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/pre-dexed/debug/classes-530e85090240f087931ef36dfe562a3dd1ac10cf.jar" />
+    </item>
+    <item
+        jar="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/pre-dexed/debug/classes-6f33d2545ab680d79fac1d8035923f161fd26952.jar" />
+    </item>
+    <item
+        jar="/Users/INT-jhson5183/Documents/android_sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/INT-jhson5183/Documents/androidstudio/sample/DragAndDropGridView/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-9f30e73d2f7290473344a4a1e9d85c3245d8dd8e.jar" />
+    </item>
+
+</items>
