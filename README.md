@@ -12,7 +12,9 @@ DropAdapter : 그리드뷰에 들어가는 어댑터로 해당 클래스를 상�
 
 
   private List<DropModel> mList = new ArrayList<>();
+  
   DropAdapter mDropAdapter = new NumberAdapter(this, mList);
+  
   mDropGridView.setAdapter(mDropAdapter);
   
   //////////
